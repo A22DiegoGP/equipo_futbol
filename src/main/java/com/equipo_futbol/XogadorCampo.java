@@ -12,18 +12,27 @@ public class XogadorCampo extends Xogador {
             Posicion posicion) {
                 super();
     }
+   
+    public Posicion getPosicion() {
+        return posicion;
+    }
 
+
+    public void setPosicion(Posicion posicion) {
+        this.posicion = posicion;
+    }
     
     @Override
-    public void marcar(int newgoles) {
-        salario = salario + 500*newgoles;
-        num_goles = this.num_goles + newgoles;  
+    public void marcar(int goles) {
+         setSalario(getSalario() + 500*goles);
+         setNum_goles(getNum_goles() + goles);
     }
 
     @Override
     public String toString() {
-        return "XogadorCampo [nome=" + nome + ", apelidos=" + apelidos + ", idade=" + idade + ", dorsal=" + dorsal
-        + ", num_goles=" + num_goles + ", salario=" + salario + ", posicion=" + posicion + "]";
+        return "XogadorCampo [nome=" + getNome() + ", apelidos=" + getApelidos() + ", idade=" + getIdade() + ", dorsal=" + getDorsal()
+        + ", num_goles=" + getNum_goles() + ", salario=" + getSalario() + ", posicion=" + getPosicion() + "]";
     }
+
     
 }

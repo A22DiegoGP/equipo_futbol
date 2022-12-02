@@ -1,12 +1,12 @@
 package com.equipo_futbol;
 
 public abstract class Xogador {
-    public String nome;
-    public String apelidos;
-    public int idade;
-    public int dorsal;
-    public int num_goles;
-    public double salario;
+    private String nome;
+    private String apelidos;
+    private int idade;
+    private int dorsal;
+    private int num_goles;
+    private double salario;
 
     public String getNome() {
         return nome;
@@ -56,9 +56,9 @@ public abstract class Xogador {
         this.salario = salario;
     }
     
-    public void marcar(int newgoles) {
-        num_goles = num_goles + newgoles;
-    }
+   public abstract void marcar(int goles);
+   
+   public Xogador(){}
 
     @Override
     public String toString() {

@@ -6,7 +6,7 @@ public class Porteiro extends Xogador {
 
     public Porteiro(String nome, String apelidos, int idade, int dorsal, int num_goles, double salario, int numParadas,
             int golesEncaixados) {
-        super();
+        super()
         this.numParadas = numParadas;
         this.golesEncaixados = golesEncaixados;
     }
@@ -28,9 +28,13 @@ public class Porteiro extends Xogador {
     }
 
     @Override
+    public void marcar(int goles) {
+        setNum_goles(getNum_goles() + goles);
+    }
+    @Override
     public String toString() {
-        return "Porteiro [nome=" + nome + ", apelidos=" + apelidos + ", idade=" + idade + ", dorsal=" + dorsal
-        + ", num_goles=" + num_goles + ", salario=" + salario +", numParadas=" + numParadas + ", golesEncaixados=" + golesEncaixados + "]";
+        return "Porteiro [nome=" + getNome() + ", apelidos=" + getApelidos() + ", idade=" + getIdade() + ", dorsal=" + getDorsal()
+        + ", num_goles=" + getNum_goles() + ", salario=" + getSalario() +", numParadas=" + getNumParadas() + ", golesEncaixados=" + getGolesEncaixados() + "]";
     }
     
     
